@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import asyncComponent from './components/AsyncComponent';
+import asyncComponent from './components/helpers/AsyncComponent';
 import Loadable from 'react-loadable';
-import AppliedRoute from './components/AppliedRoute';
+import AppliedRoute from './components/helpers/AppliedRoute';
 
 const MyLoadingComponent = ({ isLoading, error }) => {
   // Handle the loading state
@@ -17,10 +17,12 @@ const MyLoadingComponent = ({ isLoading, error }) => {
 };
 
 const AsyncHome = Loadable({
-  loader: () => import('./components/Test'),
+  loader: () => import('./components/modules/Test'),
   loading: MyLoadingComponent
 });
-const AsyncNotFound = asyncComponent(() => import('./components/NotFound'));
+const AsyncNotFound = asyncComponent(() =>
+  import('./components/modules/NotFound')
+);
 
 export default ({ childProps }) => (
   <Switch>

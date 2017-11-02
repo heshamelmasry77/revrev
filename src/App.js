@@ -1,9 +1,11 @@
 // @flow
 import React, { Component } from 'react';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Helmet from 'react-helmet';
 import Routes from './Routes';
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/shared/Header/Header';
+import Footer from './components/shared/Footer/Footer';
+import './stylesheets/App.css';
 
 class App extends Component {
   handleClick = () => {
@@ -15,22 +17,25 @@ class App extends Component {
         // Handle failure
       });
   };
+
   render() {
     return (
-      <div className="App">
-        <Helmet title="You Are Doing Great" />
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+      <MuiThemeProvider>
+        <div className="App">
+          <Helmet title="You Are Doing Great" />
+          <div className="App-header">
+            <Header />
+          </div>
+          <p className="App-intro">
+            To get started, edit <code>src/App.js</code> and save to reload.
+          </p>
+          <div>
+            <button onClick={this.handleClick}>Load</button>
+          </div>
+          <Routes />
+          <Footer />
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <div>
-          <button onClick={this.handleClick}>Load</button>
-        </div>
-        <Routes />
-      </div>
+      </MuiThemeProvider>
     );
   }
 }

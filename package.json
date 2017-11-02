@@ -3,15 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "bootstrap": "3",
+    "express": "^4.16.2",
     "flow-bin": "^0.57.3",
     "husky": "^0.14.3",
     "lint-staged": "^4.3.0",
+    "material-ui": "^0.19.4",
+    "morgan": "^1.9.0",
     "node-sass-chokidar": "^0.0.3",
     "npm-run-all": "^4.1.1",
     "prettier": "^1.7.4",
     "react": "^16.0.0",
-    "react-bootstrap": "^0.31.5",
     "react-dom": "^16.0.0",
     "react-helmet": "^5.2.0",
     "react-icons": "^2.2.7",
@@ -19,7 +20,7 @@
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.16",
-    "react-snapshot": "^1.2.0",
+    "react-tap-event-plugin": "^3.0.2",
     "styled-components": "^2.2.3"
   },
   "lint-staged": {
@@ -34,8 +35,9 @@
     "precommit": "lint-staged",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
+    "start:server": "node server",
     "build-js": "react-scripts build",
-    "build": "npm-run-all build-css build-js && react-snapshot",
+    "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "flow": "flow"

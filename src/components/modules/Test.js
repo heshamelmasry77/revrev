@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import GoBeer from 'react-icons/lib/go/beer';
 import ContestPreview from './ContestPreview';
-import data from '../testData.json';
+import data from '../../testData.json';
 
 console.log(data);
 

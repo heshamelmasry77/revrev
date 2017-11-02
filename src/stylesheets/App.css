@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700|Roboto:300,400,500,700');
 .App {
   text-align: center;
 }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 40px;
+  vertical-align: -webkit-baseline-middle;
+  position: relative;
+  bottom: 10px;
 }
 
 .App-header {
