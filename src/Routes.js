@@ -17,7 +17,7 @@ const MyLoadingComponent = ({ isLoading, error }) => {
 };
 
 const AsyncHome = Loadable({
-  loader: () => import('./components/modules/Test'),
+  loader: () => import('./components/modules/TabPuzzle'),
   loading: MyLoadingComponent
 });
 const AsyncNotFound = asyncComponent(() =>
