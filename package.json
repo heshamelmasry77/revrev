@@ -35,7 +35,7 @@
     "precommit": "lint-staged",
     "start-js": "react-scripts start",
     "start": "node server",
-    "heroku-postbuild": "cd client && yarn --production=false && yarn run build",
+    "heroku-postbuild": "yarn --production=false && yarn run build",
     "build-js": "react-scripts build",
     "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
