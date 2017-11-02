@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700|Roboto:300,400,500,700');
 .App {
+  font-family: 'Roboto', sans-serif;
   text-align: center;
 }
 
@@ -9,13 +10,6 @@
   vertical-align: -webkit-baseline-middle;
   position: relative;
   bottom: 10px;
-}
-
-.App-header {
-  background-color: lightgray;
-  height: 90px;
-  padding: 20px;
-  color: white;
 }
 
 .App-title {

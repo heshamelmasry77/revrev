@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 import GoBeer from 'react-icons/lib/go/beer';
 import ContestPreview from './ContestPreview';
-import data from '../../testData.json';
+import data from '../../../testData.json';
 
 console.log(data);
 

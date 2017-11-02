@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 //import PropTypes from 'prop-types';
 import '../../../stylesheets/header/Header.css';
-import NavbarInstance from '../Header/modules/Navbar';
+import AppBarComposition from './modules/components/AppBarComposition';
 
 class Header extends Component {
   render() {
     return (
       <div className="Header">
-        <NavbarInstance />
+        <AppBarComposition />
       </div>
     );
   }
