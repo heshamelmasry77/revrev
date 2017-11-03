@@ -37,6 +37,7 @@
     "precommit": "lint-staged",
     "start-js": "react-scripts start",
     "start": "node server",
+    "serve":"yarn npm-run-all -p watch-css start-js",
     "heroku-postbuild": "yarn --production=false && yarn run build",
     "build-js": "react-scripts build",
     "build": "npm-run-all build-css build-js",
