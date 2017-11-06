@@ -17,8 +17,7 @@ const MyLoadingComponent = ({ isLoading, error }) => {
 };
 
 const AsyncHome = Loadable({
-  loader: () =>
-    import('./components/Search/components/AutoCompleteExampleFilters'),
+  loader: () => import('./components/Search/Search'),
   loading: MyLoadingComponent
 });
 const AsyncNotFound = asyncComponent(() =>

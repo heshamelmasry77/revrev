@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Test from './components/Test';
+import SearchCompanies from './components/SearchCompanies';
+
 import '../../stylesheets/search/Search.css';
 
 import { Tabs, Tab } from 'material-ui/Tabs';
@@ -28,32 +29,22 @@ class Search extends Component {
           value={this.state.value}
           onChange={this.handleChange}
         >
-          <Tab className="Tab" label="Tab A" value="a">
+          <Tab className="Tab" label="Companies" value="a">
             <div>
-              <h2>Controllable Tab A</h2>
-              <p>
-                <Test />
-              </p>
+              <h2>Companies</h2>
+              <SearchCompanies />
             </div>
           </Tab>
-          <Tab className="Tab" label="Tab B" value="b">
+          <Tab className="Tab" label="Salaries" value="b">
             <div>
-              <h2>Controllable Tab B</h2>
-              <p>
-                This is another example of a controllable tab. Remember, if you
-                use controllable Tabs, you need to give all of your tabs values
-                or else you wont be able to select them.
-              </p>
+              <h2>Salaries</h2>
+              <p>to be implemented search for salaries </p>
             </div>
           </Tab>
-          <Tab label="Tab C" value="c">
+          <Tab label="Interviews" value="c">
             <div>
-              <h2>Controllable Tab C</h2>
-              <p>
-                This is another example of a controllable tab. Remember, if you
-                use controllable Tabs, you need to give all of your tabs values
-                or else you wont be able to select them.
-              </p>
+              <h2>Interviews</h2>
+              <p>to be implemented search for interviews </p>
             </div>
           </Tab>
         </Tabs>
