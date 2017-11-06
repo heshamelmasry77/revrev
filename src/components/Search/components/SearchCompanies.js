@@ -1,15 +1,10 @@
 import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
-import AutoComplete from 'material-ui/AutoComplete';
 import data from '../../../testData.json';
-import RaisedButton from 'material-ui/RaisedButton';
-
-console.log(data);
 
 class SearchCompanies extends Component {
   // we can use this also
   state = {
-    pageHeader: 'Naming me ',
     contests: []
   };
   // This is the life cycle method that guarantees
@@ -30,42 +25,19 @@ class SearchCompanies extends Component {
     // debugger;
   }
 
-  onSubmit = formData => {
-    alert(formData);
-  };
-  render() {
-    return (
-      <div>
-        {/*<form onSubmit={this.onSubmit}>*/}
-        <form>
-          <AutoComplete
-            floatingLabelText="Type 'company name',  revrev search"
-            filter={AutoComplete.fuzzyFilter}
-            dataSource={this.state.contests.map(function(item) {
-              return item.categoryName;
-            })}
-            maxSearchResults={5}
-            onUpdateInput={this.handleUpdateInput.bind(this)}
-          />
-          <RaisedButton
-            type="button"
-            label="Search"
-            className="button-submit"
-            primary={true}
-            onClick={this.handleSearch}
-          />
-        </form>
-      </div>
-    );
-  }
-
   handleUpdateInput = searchText => {
-    console.log(searchText);
-    this.setState({ searchCompany: this.state.searchText });
+    this.setState({ searchCompany: searchText });
   };
-  handleSearch = searchedCompany => {
-    console.log(searchedCompany);
+  // handleSubmit is a property that receives the event.
+  handleSubmit = event => {
+    event.preventDefault();
+    //read the value that the user typed
+    console.log(this.state.searchCompany);
   };
+
+  render() {
+    return <div />;
+  }
 }
 
 export default SearchCompanies;
