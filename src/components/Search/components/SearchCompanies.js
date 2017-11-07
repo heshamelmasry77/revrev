@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 import data from '../../../testData.json';
+import GoBeer from 'react-icons/lib/go/beer';
 
 class SearchCompanies extends Component {
   // we can use this also
@@ -36,7 +37,13 @@ class SearchCompanies extends Component {
   };
 
   render() {
-    return <div />;
+    return (
+      <div>
+        <h1>
+          i am a beer page <GoBeer />
+        </h1>
+      </div>
+    );
   }
 }
 

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 // import SearchCompanies from './components/SearchCompanies';
-import { Grid, Navbar, Jumbotron, Button } from 'react-bootstrap';
-
-import '../../stylesheets/search/Search.css';
+// import { Grid, Navbar, Jumbotron, Button } from 'react-bootstrap';
+import { Tabs, Tab } from 'react-bootstrap';
+import SearchCompanies from '../Search/components/SearchCompanies';
+import '../../stylesheets/Search.css';
 
 class Search extends Component {
   constructor(props) {
@@ -22,31 +23,17 @@ class Search extends Component {
     return (
       <div className="Search">
         <div>
-          <Navbar inverse fixedTop>
-            <Grid>
-              <Navbar.Header>
-                <Navbar.Brand>
-                  <a href="/">React App</a>
-                </Navbar.Brand>
-                <Navbar.Toggle />
-              </Navbar.Header>
-            </Grid>
-          </Navbar>
-          <Jumbotron>
-            <Grid>
-              <h1>Welcome to React</h1>
-              <p>
-                <Button
-                  bsStyle="success"
-                  bsSize="large"
-                  href="http://react-bootstrap.github.io/components.html"
-                  target="_blank"
-                >
-                  View React Bootstrap Docs
-                </Button>
-              </p>
-            </Grid>
-          </Jumbotron>
+          <Tabs defaultActiveKey={1} animation={true} id="noanim-tab-example">
+            <Tab eventKey={1} title="Tab 1">
+              <SearchCompanies />
+            </Tab>
+            <Tab eventKey={2} title="Tab 2">
+              Tab 2 content
+            </Tab>
+            <Tab eventKey={3} title="Tab 3" disabled>
+              Tab 3 content
+            </Tab>
+          </Tabs>
         </div>
       </div>
     );

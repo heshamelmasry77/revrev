@@ -2,8 +2,8 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import Routes from './Routes';
-import Header from './components/shared/Header/Header';
-import Footer from './components/shared/Footer/Footer';
+import Header from './components/shared/Header';
+import Footer from './components/shared/Footer';
 
 import './stylesheets/App.css';
 

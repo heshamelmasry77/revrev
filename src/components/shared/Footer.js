@@ -1,7 +1,7 @@
 import React from 'react';
 //import PropTypes from 'prop-types';
-import logo from '../../../assets/logos/ReactLogo.svg'; // Tell Webpack this JS file uses this image
-import '../../../stylesheets/footer/Footer.css';
+import logo from '../../assets/logos/ReactLogo.svg'; // Tell Webpack this JS file uses this image
+import '../../stylesheets/Footer.css';
 
 const Footer = () => {
   return (

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import PropTypes from 'prop-types';
-import '../../../stylesheets/header/Header.css';
+import '../../stylesheets/Header.css';
 
 class Header extends Component {
   render() {
